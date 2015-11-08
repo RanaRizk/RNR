@@ -20,15 +20,15 @@ class Application_Form_Tocategory extends Zend_Form {
         $submit->setAttrib("class", "btn btn-primary");
         $submit->setLabel("Save");
         $submit->setRequired();
-        
-        
+
+
         $rest = new Zend_Form_Element_Reset('Reset');
         $rest->setAttrib("class", "btn btn-info");
 
         $id = new Zend_Form_Element_Hidden("id");
 
 
-        $this->addElements(array($title, $picture, $submit,$rest, $id));
+        $this->addElements(array($title, $picture, $submit, $rest, $id));
     }
 
 }

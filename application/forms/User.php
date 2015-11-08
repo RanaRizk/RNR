@@ -58,7 +58,7 @@ class Application_Form_User extends Zend_Form {
         $id = new Zend_Form_Element_Hidden("id");
         $submit = new Zend_Form_Element_Submit("Submit");
         $submit->setAttrib("class", "btn btn-primary");
-                $submit->setLabel("Save");
+        $submit->setLabel("Save");
 
         $rest = new Zend_Form_Element_Reset('Reset');
         $rest->setAttrib("class", "btn btn-info");

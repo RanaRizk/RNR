@@ -66,37 +66,37 @@ $userInfo = Zend_Auth::getInstance()->getStorage()->read();
                             ?>
                             <tr> 
 
-                            <td style="text-align:center"> <?php echo $this->users[$i]['userName']; ?></td>
-                            <td style="text-align:center"> <?php echo $this->users[$i]['email']; ?> </td>   
-                            <td style="text-align:center"> <?php echo $this->users[$i]['gender']; ?> </td>
-                            <td style="text-align:center"> <?php echo $this->users[$i]['country']; ?> </td>
-                            <td style="text-align:center" >
-                                <img class="img-thumbnail" src="<?php echo $this->baseUrl() . '/images/user/profilePicture/' . $this->users[$i]['profilePicture'] ?>" width="90px" height="90px">  
-                            </td>
-
-                            <td style="text-align:center" >
-                                <img  class="img-thumbnail" src="<?php echo $this->baseUrl() . '/images/user/signature/' . $this->users[$i]['signature'] ?>" width="90px" height="90px">  
-                            </td>
-
-                            <td style="text-align:center" ><a href="<?php echo $this->baseUrl() ?>/user/type/id/<?php echo $this->users[$i]['id']; ?>/type/<?php echo $this->users[$i]['type']; ?>"  >  <?php echo $this->users[$i]['type']; ?> </a></td>
-                            <?php if ($this->users[$i]['type'] == "regular") { ?>
-                                <td style="text-align:center"><a href="<?php echo $this->baseUrl() ?>/user/ban/id/<?php echo $this->users[$i]['id']; ?>/ban/<?php echo $this->users[$i]['ban']; ?>"  >  <?php echo $this->users[$i]['ban']; ?> </a></td>
-                            <?php } else { ?>
-                                <td style="text-align:center"><?php echo $this->users[$i]['ban']; ?></td>
-                            <?php }if ($this->users[$i]['type'] == "regular") { ?>
+                                <td style="text-align:center"> <?php echo $this->users[$i]['userName']; ?></td>
+                                <td style="text-align:center"> <?php echo $this->users[$i]['email']; ?> </td>   
+                                <td style="text-align:center"> <?php echo $this->users[$i]['gender']; ?> </td>
+                                <td style="text-align:center"> <?php echo $this->users[$i]['country']; ?> </td>
                                 <td style="text-align:center" >
-                                    <a href="<?php echo $this->baseUrl() ?>/user/edit/id/<?php echo $this->users[$i]['id']; ?>" class="btn btn-primary">Edit</a>
-                                    <br /><br />
-                                    <a href="<?php echo $this->baseUrl() ?>/user/delete/id/<?php echo $this->users[$i]['id']; ?>" class="btn btn-danger" >Delete</a>
-                                </td>
-                            <?php } else { ?>
-                                <td style="text-align:center" >
-                                    <a href="<?php echo $this->baseUrl() ?>/user/edit/id/<?php echo $this->users[$i]['id']; ?>" class="btn btn-primary"  disabled="disabled">Edit</a>
-                                    <br /><br />
-                                    <a href="<?php echo $this->baseUrl() ?>/user/delete/id/<?php echo $this->users[$i]['id']; ?>" class="btn btn-danger" disabled="disabled">Delete</a>
+                                    <img class="img-thumbnail" src="<?php echo $this->baseUrl() . '/images/user/profilePicture/' . $this->users[$i]['profilePicture'] ?>" width="90px" height="90px">  
                                 </td>
 
-                            <?php } ?>
+                                <td style="text-align:center" >
+                                    <img  class="img-thumbnail" src="<?php echo $this->baseUrl() . '/images/user/signature/' . $this->users[$i]['signature'] ?>" width="90px" height="90px">  
+                                </td>
+
+                                <td style="text-align:center" ><a href="<?php echo $this->baseUrl() ?>/user/type/id/<?php echo $this->users[$i]['id']; ?>/type/<?php echo $this->users[$i]['type']; ?>"  >  <?php echo $this->users[$i]['type']; ?> </a></td>
+                                <?php if ($this->users[$i]['type'] == "regular") { ?>
+                                    <td style="text-align:center"><a href="<?php echo $this->baseUrl() ?>/user/ban/id/<?php echo $this->users[$i]['id']; ?>/ban/<?php echo $this->users[$i]['ban']; ?>"  >  <?php echo $this->users[$i]['ban']; ?> </a></td>
+                                <?php } else { ?>
+                                    <td style="text-align:center"><?php echo $this->users[$i]['ban']; ?></td>
+                                <?php }if ($this->users[$i]['type'] == "regular") { ?>
+                                    <td style="text-align:center" >
+                                        <a href="<?php echo $this->baseUrl() ?>/user/edit/id/<?php echo $this->users[$i]['id']; ?>" class="btn btn-primary">Edit</a>
+                                        <br /><br />
+                                        <a href="<?php echo $this->baseUrl() ?>/user/delete/id/<?php echo $this->users[$i]['id']; ?>" class="btn btn-danger" >Delete</a>
+                                    </td>
+                                <?php } else { ?>
+                                    <td style="text-align:center" >
+                                        <a href="<?php echo $this->baseUrl() ?>/user/edit/id/<?php echo $this->users[$i]['id']; ?>" class="btn btn-primary"  disabled="disabled">Edit</a>
+                                        <br /><br />
+                                        <a href="<?php echo $this->baseUrl() ?>/user/delete/id/<?php echo $this->users[$i]['id']; ?>" class="btn btn-danger" disabled="disabled">Delete</a>
+                                    </td>
+
+                                <?php } ?>
                             <tr/>                   
                             <?php
                         }

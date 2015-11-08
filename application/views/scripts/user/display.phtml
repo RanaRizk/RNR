@@ -63,12 +63,14 @@ $userInfo = Zend_Auth::getInstance()->getStorage()->read();
 
                             </thead>
                         </table>
-                        <?php if (count($userInfo) != 0) {
+                        <?php
+                        if (count($userInfo) != 0) {
                             if ($userInfo->id == $this->user['id']) {
                                 ?>
                                 <p  style="text-align:center"> <a href="<?php echo $this->baseUrl() ?>/user/edit/id/<?php echo $this->user['id']; ?>" class="btn btn-primary" >Edit</a></p>
 
-                            <?php }
+                            <?php
+                            }
                         }
                         ?>
 

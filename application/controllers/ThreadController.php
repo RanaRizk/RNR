@@ -49,11 +49,10 @@ class ThreadController extends Zend_Controller_Action {
                 if (count($unsticky) != 0) {
                     $this->view->unsticky = $unsticky;
                 }
-                
-            } 
-         
+            }
+
             $this->view->lock = $info[0]['lock'];
-            $this->view->toCategoryId = $toCategoryId;            
+            $this->view->toCategoryId = $toCategoryId;
         }
     }
 
@@ -105,4 +104,5 @@ class ThreadController extends Zend_Controller_Action {
         }
         $this->redirect("thread/list/toCategoryId/" . $toCategoryId);
     }
+
 }

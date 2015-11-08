@@ -16,8 +16,6 @@ class Application_Model_Thread extends Zend_Db_Table_Abstract {
         return $row->save();
     }
 
-
-
     function listThreads($toCategoryId) {
         return $this->fetchAll("toCategoryId=$toCategoryId")->toArray();
     }
@@ -26,11 +24,9 @@ class Application_Model_Thread extends Zend_Db_Table_Abstract {
         return $this->delete("id=$id");
     }
 
-    function getThreadById($toCategoryId,$id) {
+    function getThreadById($toCategoryId, $id) {
         //return $this->find($id)->toArray();
-      return  $this->fetchAll(array("toCategoryId=$toCategoryId","id=$id"))->toArray();
+        return $this->fetchAll(array("toCategoryId=$toCategoryId", "id=$id"))->toArray();
     }
-
-
 
 }

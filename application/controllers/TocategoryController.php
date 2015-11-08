@@ -49,9 +49,9 @@ class TocategoryController extends Zend_Controller_Action {
 
             $tocategories = $category_model->listtoCategory($categoryId);
             $this->view->tocategories = $tocategories;
-                $form = new Application_Form_Tocategory();
-                $this->view->form = $form;
-                $this->view->id = $categoryId;
+            $form = new Application_Form_Tocategory();
+            $this->view->form = $form;
+            $this->view->id = $categoryId;
         }
     }
 

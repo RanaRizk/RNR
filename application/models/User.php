@@ -13,34 +13,7 @@ class Application_Model_user extends Zend_Db_Table_Abstract {
         $row->country = $data['country'];
         $row->profilePicture = $data['profilePicture'];
         $row->signature = $data['signature'];
-        //send
-//
-//        try {
-//            $config = array(
-//                'auth' => 'login',
-//                'username' => 'ranarihamnahla@gmail.com ',
-//                'password' => 'rananahlariham1234567',
-//                'ssl' => 'ssl',
-//                'port' => 465
-//            );
-//
-//            $mailTransport = new Zend_Mail_Transport_Smtp('smtp.gmail.com', $config);
-//            Zend_Mail::setDefaultTransport($mailTransport);
-//        } catch (Zend_Exception $e) {
-//            echo "Error";
-//        }
-//        $mail = new Zend_Mail();
-//        $mail->setBodyText('This is the text of the mail.');
-//        $mail->setFrom("ranarihamnahla@gmail.com", "riham");
-//        $sen = $data['email'];
-//        $usernamee = $data['userName'];
-//        $countryy = $data['country'];
-//        $genderr = $data['gender'];
-//        $mail->addTo("$sen", "riham");
-//        $mail->setSubject('registered correctly');
-//        $mail->setBodyText("'your username is'$usernamee,'your email is'$sen,'your country is'$countryy,'your gender is'$genderr");
-//        $mail->send($mailTransport);
-        //end
+
         return $row->save();
     }
 
@@ -64,7 +37,7 @@ class Application_Model_user extends Zend_Db_Table_Abstract {
             $data['password'] = md5($data['password']);
         else
             unset($data['password']);
-        
+
         if (empty($data['email']))
             unset($data['email']);
         if (empty($data['userName']))
@@ -88,8 +61,8 @@ class Application_Model_user extends Zend_Db_Table_Abstract {
             return $this->update($data[0], "id=" . $data[0]['id']);
         }
     }
-    
-    function locksystem($data){
+
+    function locksystem($data) {
         if ($data['ban'] == 'off') {
             $data['ban'] = 'on';
             return $this->update($data, "id=" . $data['id']);

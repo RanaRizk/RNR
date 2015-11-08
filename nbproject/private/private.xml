@@ -3,15 +3,48 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/RNR/application/controllers/UserController.php</file>
-            <file>file:/var/www/html/RNR/application/forms/User.php</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/user/index.phtml</file>
             <file>file:/var/www/html/RNR/application/models/User.php</file>
-            <file>file:/var/www/html/RNR/application/views/scripts/user/login.phtml</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/comment/index.phtml</file>
+            <file>file:/var/www/html/RNR/application/models/Comment.php</file>
             <file>file:/var/www/html/RNR/application/views/scripts/user/list.phtml</file>
-            <file>file:/var/www/html/RNR/application/views/scripts/user/locksystem.phtml</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/category/index.phtml</file>
+            <file>file:/var/www/html/RNR/application/forms/Comment.php</file>
+            <file>file:/var/www/html/RNR/application/forms/User.php</file>
+            <file>file:/var/www/html/RNR/application/controllers/IndexController.php</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/tocategory/add.phtml</file>
+            <file>file:/var/www/html/RNR/docs/README.txt</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/comment/edit.phtml</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/tocategory/index.phtml</file>
+            <file>file:/var/www/html/RNR/application/models/Category.php</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/category/list.phtml</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/thread/add.phtml</file>
+            <file>file:/var/www/html/RNR/application/controllers/ChatroomController.php</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/thread/display.phtml</file>
+            <file>file:/var/www/html/RNR/application/controllers/TocategoryController.php</file>
             <file>file:/var/www/html/RNR/application/views/scripts/user/logout.phtml</file>
+            <file>file:/var/www/html/RNR/application/models/Thread.php</file>
+            <file>file:/var/www/html/RNR/application/controllers/CommentController.php</file>
+            <file>file:/var/www/html/RNR/application/forms/Thread.php</file>
+            <file>file:/var/www/html/RNR/application/models/Emoticon.php</file>
+            <file>file:/var/www/html/RNR/application/controllers/CategoryController.php</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/user/locksystem.phtml</file>
+            <file>file:/var/www/html/RNR/application/forms/Tocategory.php</file>
+            <file>file:/var/www/html/RNR/application/controllers/ThreadController.php</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/user/home.phtml</file>
+            <file>file:/var/www/html/RNR/application/controllers/ErrorController.php</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/comment/delete.phtml</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/comment/add.phtml</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/category/add.phtml</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/user/login.phtml</file>
+            <file>file:/var/www/html/RNR/application/controllers/UserController.php</file>
+            <file>file:/var/www/html/RNR/application/models/Tocategory.php</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/tocategory/list.phtml</file>
+            <file>file:/var/www/html/RNR/application/forms/Category.php</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/thread/index.phtml</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/user/display.phtml</file>
             <file>file:/var/www/html/RNR/application/views/scripts/user/add.phtml</file>
-            <file>file:/var/www/html/RNR/application/Bootstrap.php</file>
+            <file>file:/var/www/html/RNR/application/views/scripts/thread/list.phtml</file>
         </group>
     </open-files>
 </project-private>

@@ -28,7 +28,7 @@ $userInfo = Zend_Auth::getInstance()->getStorage()->read();
         }
 
     </style>
- 
+
     <?php if ($this->toCategoryId != NULL) { ?> 
 
         <div class="row">
@@ -75,11 +75,11 @@ $userInfo = Zend_Auth::getInstance()->getStorage()->read();
                             <h3><a href="<?php echo $this->baseUrl() . '/thread/display/id/' . $this->unsticky[$i]['id'] . '/toCategoryId/' . $this->toCategoryId; ?>" ><?php echo $this->unsticky[$i]['title'] ?></a></h3>
                             <p><?php echo substr($this->unsticky[$i]['body'], 0, 15) . "..."; ?></p>
                         </div>
-         
-                <?php } ?>
+
+                    <?php } ?>
+                </div>
             </div>
-        </div>
-    <?php } else { ?>
-        <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span>  Error ! Page Not Found</div>
-    <?php } ?>
+        <?php } else { ?>
+            <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span>  Error ! Page Not Found</div>
+        <?php } ?>
 </html>

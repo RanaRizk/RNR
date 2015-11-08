@@ -17,13 +17,13 @@ class Application_Form_Thread extends Zend_Form {
         $body->setAttrib("rows", "5");
         $body->setAttrib("cols", "55");
         $body->setRequired();
-        
+
         $picture = new Zend_Form_Element_File('picture');
         $picture->setLabel("Picture:");
         $picture->setRequired();
         $picture->setDestination('/var/www/html/RNR/public/images/thread');
 
-     $stick=new Zend_Form_Element_Radio("stick");
+        $stick = new Zend_Form_Element_Radio("stick");
         $stick->setLabel("Sticky:");
         $stick->addMultiOption("on", "on");
         $stick->addMultiOption("off", "off");
@@ -33,13 +33,13 @@ class Application_Form_Thread extends Zend_Form {
         $id = new Zend_Form_Element_Hidden("id");
         $submit = new Zend_Form_Element_Submit("Submit");
         $submit->setAttrib("class", "btn btn-primary");
-                $submit->setLabel("Save");
+        $submit->setLabel("Save");
 
 
         $rest = new Zend_Form_Element_Submit('Rest');
-        $rest->setAttrib("class","btn btn-info");
+        $rest->setAttrib("class", "btn btn-info");
 
-        $this->addElements(array($id, $title, $body,$picture,$stick, $submit, $rest));
+        $this->addElements(array($id, $title, $body, $picture, $stick, $submit, $rest));
     }
 
 }

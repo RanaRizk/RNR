@@ -52,7 +52,7 @@ if (count($userInfo) != 0) {
                     <strong><h3><a href="http://localhost/RNR/public/User/display/id/<?php echo $this->id; ?>"><?php echo $this->user; ?></a></h3></strong>
                     <img class="thumbnail" width="180px" height="200px" src='<?php echo $this->baseUrl() . '/images/thread/' . $this->thread['picture']; ?>' width="200px" height="200px">
 
-                   
+
                     <div class="caption">
                         <h3><?php echo $this->thread['title'] ?></h3>
                         <p><?php echo $this->thread['body'] ?></p>
@@ -80,21 +80,12 @@ if (count($userInfo) != 0) {
                 </div>
 
                 <div class="thumbnail" id="comments">
-                    <h3>Comments                 
-                        <?php
-                        if (count($userInfo) != 0) {
-                            if ($this->lock == "off" || $userInfo->type == "admin") {
-                                ?>
-                                <a onclick="displayInputTxt('comm')" class="btn btn-info" role="button" style="float: right;">Add Comment</a> 
-                                <?php
-                            }
-                        }
-                        ?>
+                    <h3>Comments  <a onclick="displayInputTxt('comm')" class="btn btn-info" role="button" style="float: right;">Add Comment</a> 
                     </h3>
 
                     <input type="button" id="enter" onclick="addcomment()" style="display:none;" >
                     <input type="text" class="form-control"  id="comm" style="display:none;" onkeydown="if (event.keyCode == 13)
-                                document.getElementById('enter').click()" placeholder="Write a comment..."></input><br/>
+                                    document.getElementById('enter').click()" placeholder="Write a comment..."></input><br/>
                     <input type="text" id="threadId" value=<?php echo $this->thread['id']; ?> hidden>  </input>
 
                     <?php
@@ -118,7 +109,7 @@ if (count($userInfo) != 0) {
                                     <?php echo $comment; ?>
                                 </span>
                                 <input type="text" id="<?php echo "t" . $this->comments[$j]['id']; ?>" class="form-control" value="<?php echo $this->comments[$j]['body']; ?>" style="display:none;" onkeydown="if (event.keyCode == 13)
-                                            document.getElementById('<?php echo $this->comments[$j]['id']; ?>').click(this.id)"/>
+                                                    document.getElementById('<?php echo $this->comments[$j]['id']; ?>').click(this.id)"/>
                             </p>
                             <?php
                             if (count($userInfo) != 0) {

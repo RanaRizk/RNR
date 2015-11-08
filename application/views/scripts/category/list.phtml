@@ -45,7 +45,8 @@ $userInfo = Zend_Auth::getInstance()->getStorage()->read();
                         if ($userInfo->type == "admin") {
                             ?>
                             <a href="<?php echo $this->baseUrl() . '/category/add'; ?>" style='float: right;' class="btn btn-success" role="button">Add Category</a>
-                        <?php }
+                        <?php
+                        }
                     }
                     ?>
                     <br>
@@ -55,25 +56,28 @@ $userInfo = Zend_Auth::getInstance()->getStorage()->read();
                         <tr style="text-align:center">
                             <th style="text-align:center">Title</th>
                             <th style="text-align:center">Image</th>
-                            <?php if (count($userInfo) != 0) {
+                            <?php
+                            if (count($userInfo) != 0) {
                                 if ($userInfo->type == "admin") {
                                     ?>
                                     <th style="text-align:center">Action</th>
-                        <?php }
-                    }
-                    ?>
+                                <?php
+                                }
+                            }
+                            ?>
                         </tr>
                     </thead>
-<?php
-$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-for ($i = 0; $i < count($this->categories); $i++) {
-    ?>
+                    <?php
+                    $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+                    for ($i = 0; $i < count($this->categories); $i++) {
+                        ?>
                         <tr>
                             <td class="text-center" ><a href="<?php echo $this->baseUrl() . '/tocategory/list/categoryId/' . $this->categories[$i]['id'] ?>" class="nav nav-pills nav-justified"><?php echo $this->categories[$i]['title']; ?></a>
                             <td class="text-center" >
                                 <img  class='img-thumbnail' src="<?php echo $this->baseUrl() . '/images/category/' . $this->categories[$i]['picture'] ?>" width="80" height="80">    
                             </td>
-    <?php if (count($userInfo) != 0) {
+    <?php
+    if (count($userInfo) != 0) {
         if ($userInfo->type == "admin") {
             ?>
                                     <td class="text-center" >
@@ -81,7 +85,8 @@ for ($i = 0; $i < count($this->categories); $i++) {
                                         <br><br>
                                         <a href="<?php echo $this->baseUrl() . '/category/delete/id/' . $this->categories[$i]['id'] ?>" class="btn btn-danger" >Delete</a>
                                     </td>
-                            <?php }
+                            <?php
+                            }
                         }
                         ?>
                         </tr>

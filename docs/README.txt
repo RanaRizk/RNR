@@ -3,7 +3,7 @@ Project description
 
 This is Zend PHP Framework Project at ITI , done by 3 members
 It is a Fourm like fatakat 
-Tools : Zend PHP Framework , html , javascript , Ajax , bootstrap .
+Tools : Zend PHP Framework , html , jquery, Ajax , bootstrap .
 
 
 Features
@@ -53,3 +53,9 @@ Create database named RNR and import RNR.sql file
 Running the application
 ========================
 write in your URL : localhost/RNR/public/
+
+Run Public chat
+================
+Cd to /RNR/application/views/scripts/chatroom
+the run the command php -q server.php
+

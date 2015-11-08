@@ -1,14 +1,13 @@
 <?php
 
-class CategoryController extends Zend_Controller_Action
-{
-
+class CategoryController extends Zend_Controller_Action {
 
     public function init() {
-
+        
     }
 
     public function indexAction() {
+        
     }
 
     public function addAction() {
@@ -54,9 +53,9 @@ class CategoryController extends Zend_Controller_Action
             $category_model = new Application_Model_Category();
             $cat = $category_model->getCategoryById($id);
             $form->populate($cat[0]);
-        } 
+        }
         $this->view->form = $form;
         $this->render('add');
     }
-}
 
+}
